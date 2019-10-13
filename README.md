@@ -5,8 +5,7 @@
 
 <hr />
 
-<h2>Design patterns</h2>
-<h4>Creational patterns</h4>
+<h2>Creational patterns</h2>
 <ul>
 	<li>Factory</li>
 	<li>Builder</li>
