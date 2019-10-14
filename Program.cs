@@ -80,16 +80,18 @@ namespace DesignPattern
                 }
                 // Loop around until the user presses the enter go.
             } while (key.KeyChar != 13);
-            // Choose the pattern
-            ChoosePattern(DesignPatternsType.FirstOrDefault(d => d.Name == menuItems[curItem]));
+            // selected the pattern
+            SelectedPattern(DesignPatternsType.FirstOrDefault(d => d.Name == menuItems[curItem]));
         }
 
-        public static void ChoosePattern(Type selectedPattern)
+        public static void SelectedPattern(Type selectedPattern)
         {
             Pattern pattern = (Pattern)Activator.CreateInstance(selectedPattern);
-            // clear the menu
             Console.Clear();
             pattern.Demo();
+            Console.WriteLine($"{Environment.NewLine}Press any key to go back to menu.");
+            Console.ReadLine();
+            RenderMenu();
         }
 
     }

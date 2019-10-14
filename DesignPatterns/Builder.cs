@@ -98,6 +98,7 @@ namespace DesignPattern.DesignPatterns
         /// </summary>
         public override void Demo()
         {
+            Console.WriteLine($"================Builder================{Environment.NewLine}");
             // in case we want to created wooden house
             var woodenHouseBuilder = new WoodenHouseBuilder();
             var houseDirector = new HouseDirector(woodenHouseBuilder);
@@ -111,6 +112,7 @@ namespace DesignPattern.DesignPatterns
             houseDirector.CreateBrickHouse();
             var brickHouse = brickHouseBuilder.GetHouse();
             brickHouse.ListAllPart();
+            Console.WriteLine($"{Environment.NewLine}================Builder================");
         }
     }
 }
