@@ -1,7 +1,10 @@
-﻿namespace ConsoleApp.DesignPatterns
+﻿using DesignPattern.DesignPatterns;
+using System;
+
+namespace ConsoleApp.DesignPatterns
 {
 
-    public class AbstractFactory
+    public class Factory : Pattern
     {
         // products
         public interface IButton
@@ -69,6 +72,30 @@
             {
                 return new Checkbox() { OSName = osName };
             }
+        }
+        
+        /// <summary>
+        /// Problem: Have to implement GUI elements(Button, Checkbox) for Windows and Mac OS (etc...)
+        /// Solved: Use Factory pattern for solving this problem
+        /// </summary>
+        public override void Demo()
+        {
+            Console.WriteLine($"================Factory================{Environment.NewLine}");
+            var winFactory = new WinFactory();
+            var macFactory = new MacFactory();
+
+            var winButton = winFactory.createButton();
+            var macButton = macFactory.createButton();
+
+            Console.WriteLine(winButton.Clicked());
+            Console.WriteLine(macButton.Clicked());
+
+            var winCheckbox = winFactory.createCheckbox();
+            var macCheckbox = macFactory.createCheckbox();
+
+            Console.WriteLine(winCheckbox.Checked());
+            Console.WriteLine(macCheckbox.Checked());
+            Console.WriteLine($"{Environment.NewLine}================Factory================");
         }
     }
 

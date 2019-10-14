@@ -1,9 +1,12 @@
 <h1>DesignPattern</h1>
 
-<p>This project created for learning and understand c# design patterns.</p>
-<p>In Program.cs file has showed how's client use each design pattern and little detail of each demo.</p>
+<p>This project created for learning and understand design patterns.</p>
+<p>Information reference from <a href='https://saladpuk.gitbook.io/learn/software-design/designpatterns'>link</a></p>
 
 <hr />
+
+<h2>Instruction</h2>
+<p>All patterns in Solution -> DesignPatterns folders.</p>
 
 <h2>Creational patterns</h2>
 <ul>
