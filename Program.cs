@@ -40,15 +40,12 @@ namespace DesignPattern
                 // Clear the screen.  One could easily change the cursor position,
                 // but that won't work out well with tabbing out menu items.
                 Console.Clear();
-
-                // Replace this with whatever you want.
                 Console.WriteLine("Choose the design pattern to see the demo output . . .");
 
                 // The loop that goes through all of the menu items.
                 for (c = 0; c < menuItems.Count(); c++)
                 {
                     // If the current item number is our variable c, tab out this option.
-                    // You could easily change it to simply change the color of the text.
                     if (curItem == c)
                     {
                         Console.Write(">>");
