@@ -97,7 +97,7 @@ namespace DesignPattern.DesignPatterns
         #endregion
 
         /// <summary>
-        /// Problem: When we need to add new virtual method and don't want to initial and manage many class
+        /// Problem: When we need to add new method and don't want to initial and manage many classes
         /// Solved: Use Decorator to wrap all objects into one object and only 1 execute method it'll automatically execute all wrappee objects
         /// </summary>
         public override void Demo()
