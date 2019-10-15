@@ -17,7 +17,8 @@ namespace DesignPattern
             var baseClassType = typeof(Pattern);
             var types = AppDomain.CurrentDomain.GetAssemblies()
                                                .SelectMany(s => s.GetTypes())
-                                               .Where(p => baseClassType.IsAssignableFrom(p) && p.FullName != baseClassType.FullName);
+                                               .Where(p => baseClassType.IsAssignableFrom(p) && p.FullName != baseClassType.FullName)
+                                               .OrderBy(p => p.Name);
             return types;
         }
 
