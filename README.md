@@ -28,7 +28,6 @@
 <h2>Behavioral patterns</h2>
 <ul>
 	<li>Chain of Responsibility</li>
-	<li>Command</li>
 	<li>Iterator</li>
 	<li>Mediator</li>
 	<li>Memento</li>
