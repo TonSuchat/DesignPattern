@@ -90,7 +90,6 @@ namespace DesignPattern
             Console.ReadLine();
             RenderMenu();
         }
-
     }
 
 }

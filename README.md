@@ -15,3 +15,12 @@
 	<li>Prototype</li>
 	<li>Singleton</li>
 </ul>
+
+<h2>Structural patterns</h2>
+<ul>
+	<li>Adapter</li>
+	<li>Bridge</li>
+	<li>Decorator</li>
+	<li>Facade</li>
+	<li>Proxy</li>
+</ul>
