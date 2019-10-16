@@ -6,6 +6,11 @@ namespace DesignPattern.DesignPatterns
 {
     public class State : Pattern
     {
+        #region Constants
+        private readonly static string INFO = "INFO";
+        private readonly static string DRINK_MACHINE = "DRINK-MACHINE";
+        private readonly static string INSERT_MORE_COINS = $"{DRINK_MACHINE}: Insert more coins / Minimum price is 7 coins";
+        #endregion
 
         #region State
         public interface IState
@@ -15,7 +20,7 @@ namespace DesignPattern.DesignPatterns
         }
 
         // concrete states
-        const string INSERT_MORE_COINS = "DRINK-MACHINE: Insert more coins / Minimum price is 7 coins";
+        
         public class NotAvailable : IState
         {
             private DrinkMachine context;
@@ -39,7 +44,7 @@ namespace DesignPattern.DesignPatterns
                 }
                 else
                 {
-                    Console.WriteLine("DRINK-MACHINE: Buy 1 water");
+                    Console.WriteLine($"{DRINK_MACHINE}: Buy 1 water");
                     context.coin -= 7;
                     if (context.coin < 7) context.ChangeState(new NotAvailable(context));
                 }
@@ -75,10 +80,10 @@ namespace DesignPattern.DesignPatterns
         public override void Demo()
         {
             var drinkMachine = new DrinkMachine();
-            Console.WriteLine("INFO: Insert 5 coins and try to buy some drink");
+            Console.WriteLine($"{INFO}: Insert 5 coins and try to buy some drink");
             drinkMachine.InsertCoin(5);
             drinkMachine.Buy();
-            Console.WriteLine("INFO: Insert 2 more coins and buy again");
+            Console.WriteLine($"{INFO}: Insert 2 more coins and buy again");
             drinkMachine.InsertCoin(2);
             drinkMachine.Buy();
         }
