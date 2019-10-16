@@ -33,7 +33,4 @@
 	<li>Memento</li>
 	<li>Observer</li>
 	<li>State</li>
-	<li>Strategy</li>
-	<li>Template Method</li>
-	<li>Visitor</li>
 </ul>
